@@ -1,5 +1,3 @@
-const { useState, useEffect } = require("react");
-
 import { useState, useEffect } from "react";
 import youtube from "../apis/youtube";
 
@@ -7,7 +5,7 @@ const useVideos = (defaultSearchTerm) => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    onTermSubmit(defaultSearchTerm);
+    search(defaultSearchTerm);
   }, [defaultSearchTerm]);
 
   const search = async (term) => {
